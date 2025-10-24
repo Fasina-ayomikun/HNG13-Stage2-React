@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='footer-brand'>
           <h2 className='footer-logo'>TicketFlow</h2>
           <p className='footer-tagline'>
-            Smart ticketing made simple. Track, assign, and resolve —
+            Smart ticketing made simple. Track, assign, and resolve
             effortlessly.
           </p>
         </div>

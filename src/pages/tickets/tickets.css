@@ -199,7 +199,7 @@
 
 .modal-close:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(247, 37, 133, .25);
+    box-shadow: 0 0 0 3px #04395e40;
     border-radius: 8px;
 }
 
@@ -237,8 +237,8 @@
 .field select:focus-visible,
 .field textarea:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(247, 37, 133, .25);
-    border-color: rgba(247, 37, 133, .25);
+    box-shadow: 0 0 0 2px #04395e40;
+    border-color: #04395e40;
 }
 
 .error {

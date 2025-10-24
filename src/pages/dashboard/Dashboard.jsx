@@ -41,7 +41,6 @@ export default function Dashboard() {
 
       <main className='db-main '>
         <section className='container'>
-          {/* Summary cards */}
           <h2 id='summary-title' className='heading'>
             Ticket summary
           </h2>
@@ -80,7 +79,6 @@ export default function Dashboard() {
             </article>
           </section>
 
-          {/* Quick actions / helpful info */}
           <section className='db-quick' aria-labelledby='quick-actions'>
             <h2 id='quick-actions' className='heading'>
               Quick Actions
