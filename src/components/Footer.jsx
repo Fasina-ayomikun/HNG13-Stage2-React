@@ -6,7 +6,7 @@ const Footer = () => {
       <div className='container footer-inner'>
         {/* Brand / tagline */}
         <div className='footer-brand'>
-          <h2 className='footer-logo'>TicketFlow</h2>
+          <h2 className='footer-logo'>DeeTickets</h2>
           <p className='footer-tagline'>
             Smart ticketing made simple. Track, assign, and resolve
             effortlessly.

@@ -13,17 +13,15 @@ export default function Login() {
   const [toast, setToast] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  // redirect if already authed
   if (isAuthed()) nav("/dashboard", { replace: true });
 
   function validate() {
-    const e = {};
-    if (!form.email.trim()) e.email = "Email is required.";
+    const error = {};
+    if (!form.email.trim()) error.email = "Email is required.";
     else if (!emailRe.test(form.email))
-      e.email = "Enter a valid email (name@example.com).";
-    if (!form.password.trim()) e.password = "Password is required.";
-    return e;
-    // NOTE: you can add stronger PW policy later
+      error.email = "Enter a valid email (name@example.com).";
+    if (!form.password.trim()) error.password = "Password is required.";
+    return error;
   }
 
   function onChange(ev) {
@@ -32,14 +30,14 @@ export default function Login() {
 
   function onSubmit(ev) {
     ev.preventDefault();
-    const e = validate();
-    setErrors(e);
-    if (Object.keys(e).length) {
+    const error = validate();
+    setErrors(error);
+    if (Object.keys(error).length) {
       setToast("Invalid credentials. Please check the errors.");
       setTimeout(() => setToast(""), 2200);
       return;
     }
-    // simulate auth
+
     login(form.email);
     nav("/dashboard", { replace: true });
   }

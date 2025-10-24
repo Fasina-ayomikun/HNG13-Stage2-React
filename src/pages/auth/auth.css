@@ -19,7 +19,7 @@
 .auth-title {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #3a0ca3;
+    color: var(--color-1);
     letter-spacing: -.01em;
 }
 
@@ -43,8 +43,8 @@
 
 .auth-field input:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(247, 37, 133, .25);
-    border-color: #f72585;
+    box-shadow: 0 0 0 3px var(--accent);
+    border-color: var(--color-2);
 }
 
 .auth-actions {
@@ -64,15 +64,14 @@
 .toast {
     position: fixed;
     right: 16px;
-    bottom: 16px;
-    background: #111827;
+    top: 16px;
+    height: fit-content;
+    background: var(--color-2);
     color: #fff;
-    padding: 10px 12px;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+    font-size: 0.95rem;
+    border-radius: 5px;
 }
 
-/* password input wrapper */
 .password-wrap {
     position: relative;
     display: flex;
@@ -82,18 +81,16 @@
 .password-wrap input {
     flex: 1;
     padding-right: 40px;
-    /* leave space for icon */
 }
 
-/* eye icon button */
 .toggle-pass {
     position: absolute;
     right: 10px;
     top: 50%;
+    font-size: 0.9rem;
     transform: translateY(-50%);
     border: none;
     background: none;
-    font-size: 1rem;
     cursor: pointer;
     color: #6b7280;
     transition: color 0.2s ease;

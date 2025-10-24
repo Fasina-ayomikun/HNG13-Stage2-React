@@ -21,19 +21,19 @@ export default function Signup() {
   }
 
   function validate() {
-    const e = {};
-    if (!form.email.trim()) e.email = "Email is required.";
+    const error = {};
+    if (!form.email.trim()) error.email = "Email is required.";
     else if (!emailRe.test(form.email))
-      e.email = "Enter a valid email (name@example.com).";
+      error.email = "Enter a valid email (name@example.com).";
 
-    if (!form.password) e.password = "Password is required.";
+    if (!form.password) error.password = "Password is required.";
     else if (form.password.length < 6)
-      e.password = "Use at least 6 characters.";
+      error.password = "Use at least 6 characters.";
 
-    if (!form.confirm) e.confirm = "Please confirm your password.";
+    if (!form.confirm) error.confirm = "Please confirm your password.";
     else if (form.confirm !== form.password)
-      e.confirm = "Passwords do not match.";
-    return e;
+      error.confirm = "Passwords do not match.";
+    return error;
   }
 
   function onSubmit(ev) {
@@ -45,7 +45,6 @@ export default function Signup() {
       setTimeout(() => setToast(""), 2200);
       return;
     }
-    // simulate account creation -> login
     login(form.email);
     nav("/dashboard", { replace: true });
   }
@@ -83,7 +82,6 @@ export default function Signup() {
             )}
           </div>
 
-          {/* Password */}
           <div className='auth-field'>
             <label htmlFor='password'>Password</label>
             <div className='password-wrap'>
@@ -114,7 +112,6 @@ export default function Signup() {
             )}
           </div>
 
-          {/* Confirm password */}
           <div className='auth-field'>
             <label htmlFor='confirm'>Confirm Password</label>
             <div className='password-wrap'>
