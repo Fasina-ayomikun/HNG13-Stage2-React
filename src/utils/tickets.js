@@ -8,7 +8,7 @@ export function getTickets() {
     const raw = localStorage.getItem(TICKETS_KEY);
     if (raw) return JSON.parse(raw);
   } catch {
-    // ignore
+    //ignore
   }
   const seeded = seedTickets();
   return seeded;
@@ -44,6 +44,7 @@ export function deleteTicket(id) {
 }
 
 export function statusCounts(tickets = getTickets()) {
+  if (!tickets) return { total: 0, open: 0, in_progress: 0, closed: 0 };
   const counts = { total: tickets.length, open: 0, in_progress: 0, closed: 0 };
   for (const t of tickets) {
     if (t.status === "open") counts.open++;

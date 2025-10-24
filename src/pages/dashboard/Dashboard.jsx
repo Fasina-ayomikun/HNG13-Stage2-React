@@ -1,4 +1,3 @@
-// src/pages/dashboard/Dashboard.jsx
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../utils/auth";
