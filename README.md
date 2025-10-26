@@ -7,34 +7,34 @@ It builds upon the Stage 1 app, expanding it into a **complete, authenticated ti
 
 ## **Live Demo**
 
-🔗 **Live Site:** [https://your-react-deployment-link.vercel.app](https://your-react-deployment-link.vercel.app)
-💻 **Repository:** [https://github.com/Fasina-ayomikun/HNG13-Stage0](https://github.com/Fasina-ayomikun/HNG13-Stage2-React)
+**Live Site:** [https://hng-stage2-react-deeyah.netlify.app/](https://hng-stage2-react-deeyah.netlify.app/)
+**Repository:** [https://github.com/Fasina-ayomikun/HNG13-Stage2-React](https://github.com/Fasina-ayomikun/HNG13-Stage2-React)
 
 ---
 
 ## **Setup & Run Instructions**
 
-### 1️⃣ Clone the repo
+### Clone the repo
 
 ```bash
 git clone https://github.com/Fasina-ayomikun/HNG13-Stage2-React.git
 cd HNG13-Stage2-React
 ```
 
-### 2️⃣ Install dependencies
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Run locally
+### Run locally
 
 ```bash
 npm run dev
 ```
 
 Then open the local URL shown in your terminal, e.g.
-👉 **[http://localhost:5173](http://localhost:5173)**
+**[http://localhost:5173](http://localhost:5173)**
 
 ---
 
