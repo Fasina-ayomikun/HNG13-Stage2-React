@@ -110,6 +110,7 @@ export default function Tickets() {
           {
             action_name: "Create Ticket",
             onClick: openCreate,
+            color: "primary",
           },
         ]}
       />

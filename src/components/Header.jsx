@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { logout } from "../utils/auth";
 
 const Header = ({
@@ -10,7 +10,6 @@ const Header = ({
       action_name: "Login",
       action_url: "/auth/login",
       color: "ghost",
-
       onClick: () => {},
     },
     {
@@ -23,10 +22,22 @@ const Header = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const nav = useNavigate();
+  const location = useLocation();
+
+  const isTickets = location.pathname.startsWith("/tickets");
+
   function onLogout() {
     logout();
     nav("/auth/login", { replace: true });
   }
+
+  function btnClass(color) {
+    if (color === "primary") return "btn btn-primary";
+    if (color === "ghost") return "btn btn-ghost";
+    if (color === "danger") return "btn btn-danger";
+    return "btn";
+  }
+
   return (
     <header className='header'>
       <div className='container'>
@@ -70,6 +81,22 @@ const Header = ({
                     Tickets
                   </button>
                 </li>
+
+                {/* Show only when on /tickets* */}
+                {isTickets && (
+                  <li>
+                    <button
+                      aria-label='Create Ticket'
+                      onClick={() => {
+                        nav("/tickets/new");
+                        setMenuOpen(false);
+                      }}
+                    >
+                      Create Ticket
+                    </button>
+                  </li>
+                )}
+
                 <li>
                   <button
                     onClick={() => {
@@ -84,33 +111,41 @@ const Header = ({
             </nav>
           </aside>
         )}
+
         <nav className='nav' aria-label='Main navigation'>
-          <a className='brand' href={brand_url} aria-label='TicketFlow Home'>
+          <Link className='brand' to={brand_url} aria-label='TicketFlow Home'>
             {brand}
-          </a>
+          </Link>
+
           {actions && (
             <div className='actions'>
               {actions.map((action, index) => {
-                return (
-                  <a
+                const className = btnClass(action.color);
+                const handleClick = () => {
+                  if (action.onClick) action.onClick();
+                };
+
+                // Option 1: render <button> if no action_url; otherwise <Link>
+                return action.action_url ? (
+                  <Link
                     key={index}
-                    className={
-                      action.color === "primary"
-                        ? "btn btn-primary"
-                        : action.color === "ghost"
-                        ? "btn btn-ghost"
-                        : "btn btn-danger"
-                    }
-                    onClick={() => {
-                      if (action.onClick) {
-                        action.onClick();
-                      }
-                    }}
-                    href={action.action_url}
+                    className={className}
+                    to={action.action_url}
                     aria-label={action.action_name}
+                    onClick={handleClick}
                   >
                     {action.action_name}
-                  </a>
+                  </Link>
+                ) : (
+                  <button
+                    key={index}
+                    type='button'
+                    className={className}
+                    aria-label={action.action_name}
+                    onClick={handleClick}
+                  >
+                    {action.action_name}
+                  </button>
                 );
               })}
             </div>

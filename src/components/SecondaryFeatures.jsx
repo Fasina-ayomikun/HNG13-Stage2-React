@@ -6,10 +6,6 @@ const SecondaryFeatures = () => {
       className='lp-secondary container'
       aria-labelledby='secondary-features-title'
     >
-      <div className='hero-visual' aria-hidden='true'>
-        <div className='decor-circle decor-circle--lg' />
-        <div className='decor-circle decor-circle--sm' />
-      </div>
       <div className='max-width'>
         <h2 id='secondary-features-title' className='heading'>
           Do more with TicketFlow

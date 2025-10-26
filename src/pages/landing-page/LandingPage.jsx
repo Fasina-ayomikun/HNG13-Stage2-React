@@ -9,11 +9,6 @@ import SecondaryFeatures from "../../components/SecondaryFeatures";
 export default function LandingPage() {
   return (
     <div className='lp-wrapper'>
-      {/* Skip to main content for keyboard users */}
-      <a className='skip-link' href='#main-content'>
-        Skip to main content
-      </a>
-
       <Header />
 
       <main id='main-content'>

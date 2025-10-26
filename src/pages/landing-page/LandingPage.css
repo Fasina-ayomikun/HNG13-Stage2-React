@@ -421,11 +421,3 @@
         box-shadow: none;
     }
 }
-
-/* FOCUS VISIBLE ENHANCEMENTS */
-a:focus-visible,
-button:focus-visible {
-    outline: none;
-    box-shadow: var(--focus);
-    border-radius: 10px;
-}
