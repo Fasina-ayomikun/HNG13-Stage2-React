@@ -8,10 +8,10 @@ const SecondaryFeatures = () => {
     >
       <div className='max-width'>
         <h2 id='secondary-features-title' className='heading'>
-          Do more with TicketFlow
+          Do more with DeeTickets
         </h2>
         <p className='desc'>
-          Beyond basic ticketing, TicketFlow offers advanced features to enhance
+          Beyond basic ticketing, DeeTickets offers advanced features to enhance
           your workflow and team collaboration.
         </p>
         <div className='secondary-grid'>

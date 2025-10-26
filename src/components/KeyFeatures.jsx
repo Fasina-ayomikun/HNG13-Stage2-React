@@ -11,7 +11,7 @@ const KeyFeatures = () => {
         Key features
       </h2>
       <p className='desc'>
-        TicketFlow streamlines your ticket management with intuitive features
+        DeeTickets streamlines your ticket management with intuitive features
         designed for efficiency and clarity.
       </p>
 

@@ -113,7 +113,7 @@ const Header = ({
         )}
 
         <nav className='nav' aria-label='Main navigation'>
-          <Link className='brand' to={brand_url} aria-label='TicketFlow Home'>
+          <Link className='brand' to={brand_url} aria-label='DeeTickets Home'>
             {brand}
           </Link>
 

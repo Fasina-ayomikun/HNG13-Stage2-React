@@ -103,7 +103,7 @@ export default function LandingPage() {
             How it works
           </h2>
           <p className='desc'>
-            Getting started with TicketFlow is as easy as 1-2-3. Create your
+            Getting started with DeeTickets is as easy as 1-2-3. Create your
             first ticket and experience seamless management from start to
             finish.
           </p>

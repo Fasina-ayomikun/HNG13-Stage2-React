@@ -72,7 +72,7 @@ const Footer = () => {
       <div className='footer-bottom'>
         <div className='lp-container'>
           <p>
-            &copy; {new Date().getFullYear()} TicketFlow. All rights reserved.
+            &copy; {new Date().getFullYear()} DeeTickets. All rights reserved.
           </p>
         </div>
       </div>
