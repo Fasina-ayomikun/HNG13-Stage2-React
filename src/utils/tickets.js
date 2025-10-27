@@ -1,4 +1,3 @@
-// src/utils/tickets.js
 export const TICKETS_KEY = "ticketapp_tickets";
 
 const VALID_STATUS = ["open", "in_progress", "closed"];

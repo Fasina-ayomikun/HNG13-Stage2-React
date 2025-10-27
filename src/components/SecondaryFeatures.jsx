@@ -3,10 +3,10 @@ import React from "react";
 const SecondaryFeatures = () => {
   return (
     <section
-      className='lp-secondary container'
+      className='lp-secondary '
       aria-labelledby='secondary-features-title'
     >
-      <div className='max-width'>
+      <div className='container'>
         <h2 id='secondary-features-title' className='heading'>
           Do more with DeeTickets
         </h2>
@@ -17,7 +17,6 @@ const SecondaryFeatures = () => {
         <div className='secondary-grid'>
           <article className='secondary-card card' aria-labelledby='sec1'>
             <div className='icon-circle' aria-hidden='true'>
-              {/* Kanban icon */}
               <svg
                 width='24'
                 height='24'
@@ -62,7 +61,6 @@ const SecondaryFeatures = () => {
 
           <article className='secondary-card card' aria-labelledby='sec2'>
             <div className='icon-circle' aria-hidden='true'>
-              {/* Shield icon */}
               <svg
                 width='24'
                 height='24'
@@ -86,7 +84,6 @@ const SecondaryFeatures = () => {
 
           <article className='secondary-card card' aria-labelledby='sec3'>
             <div className='icon-circle' aria-hidden='true'>
-              {/* Mail icon */}
               <svg
                 width='24'
                 height='24'

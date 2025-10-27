@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer className='lp-footer' aria-label='Site footer'>
       <div className='container footer-inner'>
-        {/* Brand / tagline */}
         <div className='footer-brand'>
           <h2 className='footer-logo'>DeeTickets</h2>
           <p className='footer-tagline'>

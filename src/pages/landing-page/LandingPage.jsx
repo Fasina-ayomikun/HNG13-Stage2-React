@@ -1,4 +1,3 @@
-import React from "react";
 import "./LandingPage.css";
 import heroImg from "../../assets/hero-img.png";
 import Footer from "../../components/Footer";
@@ -12,7 +11,6 @@ export default function LandingPage() {
       <Header />
 
       <main id='main-content'>
-        {/* HERO — centered content */}
         <section className='lp-hero' aria-labelledby='hero-heading'>
           <div className='container hero-inner'>
             <div className='hero-content'>
@@ -52,7 +50,6 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Decorative wave at the bottom of hero */}
           <svg
             className='hero-wave'
             viewBox='0 0 1440 150'
@@ -68,11 +65,8 @@ export default function LandingPage() {
           </svg>
         </section>
 
-        {/* SOCIAL PROOF */}
         <SocialProof />
-        {/* FEATURES */}
         <KeyFeatures />
-        {/* STATS STRIP */}
         <section className='lp-stats' aria-label='Key performance stats'>
           <div className='container stats-grid'>
             <div className='stat' aria-label='Tickets closed'>
@@ -90,52 +84,47 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* SECONDARY FEATURES */}
         <SecondaryFeatures />
-
-        {/* HOW IT WORKS */}
-        <section
-          id='how'
-          className='lp-how container'
-          aria-labelledby='how-title'
-        >
-          <h2 id='how-title' className='heading'>
-            How it works
-          </h2>
-          <p className='desc'>
-            Getting started with DeeTickets is as easy as 1-2-3. Create your
-            first ticket and experience seamless management from start to
-            finish.
-          </p>
-          <ol className='how-grid'>
-            <li className='how-step' aria-label='Step 1: Create'>
-              <span className='step-badge' aria-hidden='true'>
-                1
-              </span>
-              <h3 className='how-title'>Create</h3>
-              <p className='how-desc'>
-                Open a ticket with a clear title, status, and details.
-              </p>
-            </li>
-            <li className='how-step' aria-label='Step 2: Assign'>
-              <span className='step-badge' aria-hidden='true'>
-                2
-              </span>
-              <h3 className='how-title'>Assign</h3>
-              <p className='how-desc'>
-                Set owners and priorities to move work forward.
-              </p>
-            </li>
-            <li className='how-step' aria-label='Step 3: Resolve'>
-              <span className='step-badge' aria-hidden='true'>
-                3
-              </span>
-              <h3 className='how-title'>Resolve</h3>
-              <p className='how-desc'>
-                Close with context and notify stakeholders automatically.
-              </p>
-            </li>
-          </ol>
+        <section id='how' className='lp-how' aria-labelledby='how-title'>
+          <div className='container'>
+            <h2 id='how-title' className='heading'>
+              How it works
+            </h2>
+            <p className='desc'>
+              Getting started with DeeTickets is as easy as 1-2-3. Create your
+              first ticket and experience seamless management from start to
+              finish.
+            </p>
+            <ol className='how-grid'>
+              <li className='how-step' aria-label='Step 1: Create'>
+                <span className='step-badge' aria-hidden='true'>
+                  1
+                </span>
+                <h3 className='how-title'>Create</h3>
+                <p className='how-desc'>
+                  Open a ticket with a clear title, status, and details.
+                </p>
+              </li>
+              <li className='how-step' aria-label='Step 2: Assign'>
+                <span className='step-badge' aria-hidden='true'>
+                  2
+                </span>
+                <h3 className='how-title'>Assign</h3>
+                <p className='how-desc'>
+                  Set owners and priorities to move work forward.
+                </p>
+              </li>
+              <li className='how-step' aria-label='Step 3: Resolve'>
+                <span className='step-badge' aria-hidden='true'>
+                  3
+                </span>
+                <h3 className='how-title'>Resolve</h3>
+                <p className='how-desc'>
+                  Close with context and notify stakeholders automatically.
+                </p>
+              </li>
+            </ol>
+          </div>
         </section>
       </main>
 

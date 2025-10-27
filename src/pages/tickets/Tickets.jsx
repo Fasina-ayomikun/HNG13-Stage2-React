@@ -117,7 +117,6 @@ export default function Tickets() {
 
       <main className=' tk-main'>
         <section className='container'>
-          {/* Filters */}
           <section className='tk-controls' aria-label='Ticket filters'>
             <div className='control-row'>
               <div
@@ -158,7 +157,6 @@ export default function Tickets() {
             </div>
           </section>
 
-          {/* List */}
           <section className='tk-list' aria-labelledby='list-title'>
             {filtered.length === 0 ? (
               <div className='empty'>

@@ -82,7 +82,7 @@ const Header = ({
                   </button>
                 </li>
 
-                {/* Show only when on /tickets* */}
+                {/* The create button will show only when on /tickets* */}
                 {isTickets && (
                   <li>
                     <button
@@ -125,7 +125,6 @@ const Header = ({
                   if (action.onClick) action.onClick();
                 };
 
-                // Option 1: render <button> if no action_url; otherwise <Link>
                 return action.action_url ? (
                   <Link
                     key={index}
@@ -151,7 +150,7 @@ const Header = ({
             </div>
           )}
 
-          {/* Mobile Menu Button */}
+          {/* Menu Button for the mobile view */}
           <button
             className='menu-toggle'
             aria-label={menuOpen ? "Close menu" : "Open menu"}
