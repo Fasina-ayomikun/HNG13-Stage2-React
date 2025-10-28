@@ -21,7 +21,6 @@ body {
   --accent: #04395e14;
   --card-bg: #ffffff;
   --shadow: 0 4px 15px rgba(16, 24, 40, 0.103);
-  --focus: 0 0 0 3px #04395e47;
   --max-width: 1440px;
 }
 
@@ -57,9 +56,6 @@ body {
   text-decoration: none;
 }
 
-.brand:focus {
-  color: var(--color-2);
-}
 
 .actions {
   align-items: center;
@@ -85,10 +81,7 @@ body {
   transform: translateY(1px);
 }
 
-.btn:focus-visible {
-  box-shadow: var(--focus);
-  outline: none;
-}
+
 
 .btn-ghost {
   background: transparent;
@@ -364,27 +357,61 @@ body {
 
 button:focus {
   outline: 1px solid var(--cta);
-  outline-offset: 1px;
+  outline-offset: 1px
 }
 
 a:focus {
-  color: var(--cta);
   outline: none;
+  color: var(--cta)
 }
 
 button:focus-visible {
   outline: 1px solid var(--cta);
-  outline-offset: 3px;
+  outline-offset: 3px
 }
 
 a:focus-visible {
-  color: var(--cta);
   outline: none;
+  color: var(--cta)
+}
+
+button:focus {
+  outline: 1px solid var(--cta);
+  outline-offset: 1px
+}
+
+a:focus {
+  outline: none;
+  color: var(--cta)
+}
+
+button:focus-visible {
+  outline: 1px solid var(--cta);
+  outline-offset: 3px
+}
+
+a:focus-visible {
+  outline: none;
+  color: var(--cta)
+}
+
+a.quick-btn:focus,
+a.btn:focus {
+  outline: 1px solid var(--cta);
+  outline-offset: 3px;
+  color: initial
+}
+
+a.quick-btn:focus-visible,
+a.btn:focus-visible {
+  outline: 1px solid var(--cta);
+  color: initial;
+  outline-offset: 3px
 }
 
 button:focus:not(:focus-visible),
 a:focus:not(:focus-visible) {
-  outline: none;
+  outline: none
 }
 
 /* Media Queries */
